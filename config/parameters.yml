@@ -1,0 +1,2 @@
+parameters:
+    cypherbits.onionbb.tables.onionbb_table: '%core.table_prefix%cypherbits_onionbb_table'

@@ -1,0 +1,3 @@
+cypherbits_onionbb_controller:
+    path: /demo/{name}
+    defaults: { _controller: cypherbits.onionbb.controller.main:handle }

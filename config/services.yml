@@ -1,0 +1,37 @@
+imports:
+    - { resource: parameters.yml }
+
+services:
+    cypherbits.onionbb.controller.main:
+        class: cypherbits\onionbb\controller\main_controller
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@template'
+            - '@language'
+
+    cypherbits.onionbb.controller.acp:
+        class: cypherbits\onionbb\controller\acp_controller
+        arguments:
+            - '@config'
+            - '@language'
+            - '@log'
+            - '@request'
+            - '@template'
+            - '@user'
+
+    cypherbits.onionbb.service:
+        class: cypherbits\onionbb\service
+        arguments:
+            - '@user'
+            - '%cypherbits.onionbb.tables.onionbb_table%'
+
+    cypherbits.onionbb.listener:
+        class: cypherbits\onionbb\event\main_listener
+        arguments:
+            - '@language'
+            - '@controller.helper'
+            - '@template'
+            - '%core.php_ext%'
+        tags:
+            - { name: event.listener }
