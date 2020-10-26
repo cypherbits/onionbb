@@ -1,5 +1,22 @@
 # Onionbb: Tor hardening
 
+## Requeriments
+- phpBB >= 3.3.*
+- PHP >= 7.1
+
+## Features
+
+- IP whitelisting: only these IPs can make request to the forum.
+- Block Tor2Web.
+- Make sure client is connecting to our service and not the default virtualhost.
+- Block non-standard UserAgent (non-browsers and bots).
+- Only allow the latest version of Tor Browser and block other browsers.
+- Implement HTTP security headers on Response like:
+  * X-Content-Type-Options.
+  * X-Frame-Options. 
+  * Content-Security-Policy. Like disable Javascript.
+  * Referrer-Policy.
+
 ## Installation
 
 Copy the extension to phpBB/ext/cypherbits/onionbb

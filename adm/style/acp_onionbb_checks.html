@@ -3,36 +3,36 @@
 <h1>{{ lang('ACP_ONIONBB_TITLE') }}</h1>
 
 {% if S_ERROR %}
-	<div class="errorbox">
-		<h3>{{ lang('WARNING') }}</h3>
-		<p>{{ ERROR_MSG }}</p>
-	</div>
+<div class="errorbox">
+	<h3>{{ lang('WARNING') }}</h3>
+	<p>{{ ERROR_MSG }}</p>
+</div>
 {% endif %}
 
 <table class="table1 two-columns no-header responsive show-header" data-no-responsive-header="true">
-		<caption>Hardening checks</caption>
-		<colgroup>
-<col class="col1"><col class="col2"><col class="col2">
+	<caption>Hardening checks</caption>
+	<colgroup>
+		<col class="col1"><col class="col2"><col class="col2">
 	</colgroup>
-<thead>
+	<thead>
 	<tr>
 		<th>Setting</th>
 		<th>Current value</th>
-<th>Recommended</th>
+		<th>Recommended</th>
 	</tr>
 	</thead>
 	<tbody>
 	<tr>
-		<td>Min password lenght: </td>
+		<td>Min password length: </td>
 		<td><strong>{{ CYPHERBITS_ONIONBB_CHECK_PASSWORDLENGHT }}</strong></td>
-<td><strong>10</strong></td>
+		<td><strong>10</strong></td>
 	</tr>
 	<tr>
-		<td>Min username lenght: </td>
+		<td>Min username length: </td>
 		<td><strong>{{ CYPHERBITS_ONIONBB_CHECK_USERNAMELENGHT }}</strong></td>
-<td><strong>8</strong></td>
+		<td><strong>8</strong></td>
 	</tr>
-		</tbody>
-	</table>
+	</tbody>
+</table>
 
 {% include 'overall_footer.html' %}

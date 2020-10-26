@@ -17,33 +17,33 @@
 			<dt><label>Only allow request from this IPs (recommended)</label></dt>
 			<dd><label><input type="checkbox" name="cypherbits_onionbb_checkIP" value="1" {% if CYPHERBITS_ONIONBB_CHECKIP %} checked {% endif %}> Enable. Separated with commas (,)</label>INFO: current IP is {{ CURRENT_IP }}<br>
 				<textarea name="cypherbits_onionbb_checkIP_list">{{ CYPHERBITS_ONIONBB_CHECKIP_LIST }}</textarea></dd>
-			</dl>
-			<dl>
-				<dt><label>Block Tor2Web (recommended)</label></dt>
-				<dd><label><input type="checkbox" name="cypherbits_onionbb_blockTor2Web" value="1" {% if CYPHERBITS_ONIONBB_BLOCKTOR2WEB %} checked {% endif %}> Yes, block it.</label><br>
-					<label><input type="checkbox" name="cypherbits_onionbb_blockTor2Web_DNT" value="1" {% if CYPHERBITS_ONIONBB_BLOCKTOR2WEB_DNT %} checked {% endif %}> Block DNT header too. (Improves Tor2Web detection)</label>
-				</dd>
-			</dl>
-			<dl>
-				<dt><label>Only allow request with this Host header (recommended)</label></dt>
-				<dd><label><input type="checkbox" name="cypherbits_onionbb_host" value="1" {% if CYPHERBITS_ONIONBB_HOST %} checked {% endif %}> Enable. Separated with commas (,)</label>INFO: current Host header is {{ CURRENT_HOST }}<br>
-					<textarea name="cypherbits_onionbb_host_list">{{ CYPHERBITS_ONIONBB_HOST_LIST }}</textarea></dd>
-				</dl>
-				<dl>
-					<dt><label>Block non-standard User-Agents (recommended)</label></dt>
-					<dd><label><input type="checkbox" name="cypherbits_onionbb_userAgents" value="1" {% if CYPHERBITS_ONIONBB_USERAGENTS %} checked {% endif %}> Yes, block it.</label>INFO: current User-Agent is {{ HTTP_USER_AGENT }}<br>
-						<label><input type="checkbox" name="cypherbits_onionbb_userAgentsTB8" value="1" {% if CYPHERBITS_ONIONBB_USERAGENTSTB8 %} checked {% endif %}> Only allow the latest Tor Browser 8.x Windows, Linux and Android.</label>
-					</dd>
-				</dl>
+		</dl>
+		<dl>
+			<dt><label>Block Tor2Web (recommended)</label></dt>
+			<dd><label><input type="checkbox" name="cypherbits_onionbb_blockTor2Web" value="1" {% if CYPHERBITS_ONIONBB_BLOCKTOR2WEB %} checked {% endif %}> Yes, block it.</label><br>
+				<label><input type="checkbox" name="cypherbits_onionbb_blockTor2Web_DNT" value="1" {% if CYPHERBITS_ONIONBB_BLOCKTOR2WEB_DNT %} checked {% endif %}> Block DNT header too. (Improves Tor2Web detection)</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label>Only allow request with this Host header (recommended)</label></dt>
+			<dd><label><input type="checkbox" name="cypherbits_onionbb_host" value="1" {% if CYPHERBITS_ONIONBB_HOST %} checked {% endif %}> Enable. Separated with commas (,)</label>INFO: current Host header is {{ CURRENT_HOST }}<br>
+				<textarea name="cypherbits_onionbb_host_list">{{ CYPHERBITS_ONIONBB_HOST_LIST }}</textarea></dd>
+		</dl>
+		<dl>
+			<dt><label>Block non-standard User-Agents (recommended)</label></dt>
+			<dd><label><input type="checkbox" name="cypherbits_onionbb_userAgents" value="1" {% if CYPHERBITS_ONIONBB_USERAGENTS %} checked {% endif %}> Yes, block it.</label>INFO: current User-Agent is {{ HTTP_USER_AGENT }}<br>
+				<label><input type="checkbox" name="cypherbits_onionbb_userAgentsTB8" value="1" {% if CYPHERBITS_ONIONBB_USERAGENTSTB8 %} checked {% endif %}> Only allow the latest Tor Browser 8.x Windows, Linux and Android.</label>
+			</dd>
+		</dl>
 
-			</fieldset>
+	</fieldset>
 
-			<fieldset class="submit-buttons">
-				<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />
-				<!--<input class="button2" type="submit" id="preview" name="preview" value="{{ lang('PREVIEW') }}" />-->
-				{{ S_FORM_TOKEN }}
-			</fieldset>
+	<fieldset class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />
+		<!--<input class="button2" type="submit" id="preview" name="preview" value="{{ lang('PREVIEW') }}" />-->
+		{{ S_FORM_TOKEN }}
+	</fieldset>
 
-		</form>
+</form>
 
-		{% include 'overall_footer.html' %}
+{% include 'overall_footer.html' %}
