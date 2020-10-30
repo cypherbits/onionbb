@@ -64,4 +64,27 @@ class install_acp_module extends \phpbb\db\migration\migration
             )),
         );
     }
+
+    public function revert_data(){
+        return array(
+            array('config.remove', array('cypherbits_onionbb_installed')),
+
+            array('config.remove', array('cypherbits_onionbb_checkIP')),
+            array('config.remove', array('cypherbits_onionbb_checkIP_list')),
+
+            array('config.remove', array('cypherbits_onionbb_blockTor2Web')),
+            array('config.remove', array('cypherbits_onionbb_blockTor2Web_DNT')),
+
+            array('config.remove', array('cypherbits_onionbb_host')),
+            array('config.remove', array('cypherbits_onionbb_host_list')),
+
+            array('config.remove', array('cypherbits_onionbb_userAgents')),
+            array('config.remove', array('cypherbits_onionbb_userAgentsTB8')),
+
+            array('config.remove', array('cypherbits_onionbb_headers_referrer')),
+            array('config.remove', array('cypherbits_onionbb_headers_contentType')),
+            array('config.remove', array('cypherbits_onionbb_headers_frame')),
+            array('config.remove', array('cypherbits_onionbb_headers_content')),
+        );
+    }
 }

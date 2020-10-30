@@ -19,7 +19,7 @@ class install_sample_schema extends \phpbb\db\migration\migration
 
 	public static function depends_on()
 	{
-		return array('\phpbb\db\migration\data\v320\v320');
+		return array('\phpbb\db\migration\data\v330\v330');
 	}
 
 	/**
