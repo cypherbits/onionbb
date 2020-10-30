@@ -19,7 +19,7 @@ class install_acp_module extends \phpbb\db\migration\migration
 
     public static function depends_on()
     {
-        return array('\phpbb\db\migration\data\v320\v320');
+        return array('\phpbb\db\migration\data\v330\v330');
     }
 
     public function update_data()
@@ -43,6 +43,11 @@ class install_acp_module extends \phpbb\db\migration\migration
 
             array('config.add', array('cypherbits_onionbb_userAgents', 1)),
             array('config.add', array('cypherbits_onionbb_userAgentsTB8', 0)),
+
+            array('config.add', array('cypherbits_onionbb_headers_referrer', 0)),
+            array('config.add', array('cypherbits_onionbb_headers_contentType', 0)),
+            array('config.add', array('cypherbits_onionbb_headers_frame', 0)),
+            array('config.add', array('cypherbits_onionbb_headers_content', 0)),
 
             array('module.add', array(
                 'acp',
