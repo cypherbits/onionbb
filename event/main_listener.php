@@ -77,6 +77,26 @@ class main_listener implements EventSubscriberInterface
 		$checkHostHeaderList = explode(',',(string) $config['cypherbits_onionbb_host_list']);
 		$checkUserAgents = (bool) $config['cypherbits_onionbb_userAgents'];
 		$checkUserAgentsTB8 = (bool) $config['cypherbits_onionbb_userAgentsTB8'];
+        $checkHeadersReferrer = (bool) $config['cypherbits_onionbb_headers_referrer'];
+        $checkHeadersContentType = (bool) $config['cypherbits_onionbb_headers_contentType'];
+        $checkHeadersFrame = (bool) $config['cypherbits_onionbb_headers_frame'];
+        $checkUserHeadersContent = (bool) $config['cypherbits_onionbb_headers_content'];
+
+        if ($checkHeadersReferrer){
+            header("Referrer-Policy: same-origin");
+        }
+
+        if ($checkHeadersContentType){
+            header("X-Content-Type-Options: nosniff");
+        }
+
+        if ($checkHeadersFrame){
+            header("X-Frame-Options: DENY");
+        }
+
+        if ($checkUserHeadersContent){
+            header("Content-Security-Policy: script-src 'none' ");
+        }
 
 		$currentIP = $request->server('REMOTE_ADDR','');
 		$currentTor2Web = $request->server('HTTP_'.$tor2web,'');

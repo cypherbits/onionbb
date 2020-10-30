@@ -12,10 +12,10 @@
 - Block non-standard UserAgent (non-browsers and bots).
 - Only allow the latest version of Tor Browser and block other browsers.
 - Implement HTTP security headers on Response like:
+  * Referrer-Policy.
   * X-Content-Type-Options.
   * X-Frame-Options. 
-  * Content-Security-Policy. Like disable Javascript.
-  * Referrer-Policy.
+  * Content-Security-Policy. Disable Javascript execution.
 
 ## Installation
 

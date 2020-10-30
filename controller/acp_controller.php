@@ -93,6 +93,10 @@ class acp_controller
 				$this->config->set('cypherbits_onionbb_host_list', $this->request->variable('cypherbits_onionbb_host_list', ""));
 				$this->config->set('cypherbits_onionbb_userAgents', $this->request->variable('cypherbits_onionbb_userAgents', 0));
 				$this->config->set('cypherbits_onionbb_userAgentsTB8', $this->request->variable('cypherbits_onionbb_userAgentsTB8', 0));
+                $this->config->set('cypherbits_onionbb_headers_referrer', $this->request->variable('cypherbits_onionbb_headers_referrer', 0));
+                $this->config->set('cypherbits_onionbb_headers_contentType', $this->request->variable('cypherbits_onionbb_headers_contentType', 0));
+                $this->config->set('cypherbits_onionbb_headers_frame', $this->request->variable('cypherbits_onionbb_headers_frame', 0));
+                $this->config->set('cypherbits_onionbb_headers_content', $this->request->variable('cypherbits_onionbb_headers_content', 0));
 
 				// Add option settings change action to the admin log
 				$this->log->add('admin', $this->user->data['user_id'], $this->user->ip, 'LOG_ACP_ONIONBB_SETTINGS');
@@ -123,6 +127,10 @@ class acp_controller
 			strtoupper('cypherbits_onionbb_host_list')	=> (string) $this->config['cypherbits_onionbb_host_list'],
 			strtoupper('cypherbits_onionbb_userAgents')	=> (bool) $this->config['cypherbits_onionbb_userAgents'],
 			strtoupper('cypherbits_onionbb_userAgentsTB8')	=> (bool) $this->config['cypherbits_onionbb_userAgentsTB8'],
+            strtoupper('cypherbits_onionbb_headers_referrer')	=> (bool) $this->config['cypherbits_onionbb_headers_referrer'],
+            strtoupper('cypherbits_onionbb_headers_contentType')	=> (bool) $this->config['cypherbits_onionbb_headers_contentType'],
+            strtoupper('cypherbits_onionbb_headers_frame')	=> (bool) $this->config['cypherbits_onionbb_headers_frame'],
+            strtoupper('cypherbits_onionbb_headers_content')	=> (bool) $this->config['cypherbits_onionbb_headers_content'],
 		));
 	}
 
