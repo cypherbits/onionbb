@@ -10,12 +10,12 @@
 
 if (!defined('IN_PHPBB'))
 {
-	exit;
+    exit;
 }
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+    $lang = array();
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -36,15 +36,15 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, array(
 
-	'ONIONBB_HELLO'		=> 'Hello %s!',
-	'ONIONBB_GOODBYE'		=> 'Goodbye %s!',
+    'ONIONBB_HELLO'		=> 'Hello %s!',
+    'ONIONBB_GOODBYE'		=> 'Goodbye %s!',
 
-	'ONIONBB_EVENT'		=> ' :: Onionbb Event :: ',
+    'ONIONBB_EVENT'		=> ' :: Onionbb Event :: ',
 
-	'ACP_ONIONBB_GOODBYE'			=> 'Should say goodbye?',
-	'ACP_ONIONBB_SETTING_SAVED'	=> 'Settings have been saved successfully!',
+    'ACP_ONIONBB_GOODBYE'			=> 'Should say goodbye?',
+    'ACP_ONIONBB_SETTING_SAVED'	=> 'Settings have been saved successfully!',
 
-	'ONIONBB_PAGE'			=> 'Onionbb Page',
-	'VIEWING_CYPHERBITS_ONIONBB'			=> 'Viewing Onionbb: Tor hardening page',
+    'ONIONBB_PAGE'			=> 'Onionbb Page',
+    'VIEWING_CYPHERBITS_ONIONBB'			=> 'Viewing Onionbb: Tor hardening page',
 
 ));
