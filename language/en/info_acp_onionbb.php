@@ -8,13 +8,11 @@
  *
  */
 
-if (!defined('IN_PHPBB'))
-{
+if (!defined('IN_PHPBB')) {
     exit;
 }
 
-if (empty($lang) || !is_array($lang))
-{
+if (empty($lang) || !is_array($lang)) {
     $lang = array();
 }
 
@@ -35,9 +33,9 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-    'ACP_ONIONBB_TITLE'	=> 'Onionbb: Tor hardening Module',
-    'ACP_ONIONBB'			=> 'OnionBB settings',
-    'ACP_ONIONBB_CHECKS'			=> 'Hardening checks',
+    'ACP_ONIONBB_TITLE' => 'Onionbb: Tor hardening Module',
+    'ACP_ONIONBB' => 'OnionBB settings',
+    'ACP_ONIONBB_CHECKS' => 'Hardening checks',
 
-    'LOG_ACP_ONIONBB_SETTINGS'		=> '<strong>Onionbb: Tor hardening settings updated</strong>',
+    'LOG_ACP_ONIONBB_SETTINGS' => '<strong>Onionbb: Tor hardening settings updated</strong>',
 ));

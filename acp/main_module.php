@@ -22,7 +22,7 @@ class main_module
     /**
      * Main ACP module
      *
-     * @param int    $id   The module ID
+     * @param int $id The module ID
      * @param string $mode The module mode (for example: manage or settings)
      * @throws \Exception
      */
@@ -36,7 +36,7 @@ class main_module
         /** @var \phpbb\language\language $language */
         $language = $phpbb_container->get('language');
 
-        switch($mode){
+        switch ($mode) {
             case "settings":
                 // Load a template from adm/style for our ACP page
                 $this->tpl_name = 'acp_onionbb_settings';

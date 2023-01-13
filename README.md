@@ -1,8 +1,9 @@
 # Onionbb: Tor hardening
 
 ## Requeriments
-- phpBB >= 3.3.*
-- PHP >= 7.1
+
+- phpBB >= 3.3.9
+- PHP >= 8.0
 
 ## Features
 
@@ -12,10 +13,10 @@
 - Block non-standard UserAgent (non-browsers and bots).
 - Only allow the latest version of Tor Browser and block other browsers.
 - Implement HTTP security headers on Response like:
-  * Referrer-Policy.
-  * X-Content-Type-Options.
-  * X-Frame-Options. 
-  * Content-Security-Policy. Disable Javascript execution.
+    * Referrer-Policy.
+    * X-Content-Type-Options.
+    * X-Frame-Options.
+    * Content-Security-Policy. Disable Javascript execution.
 
 ## Installation
 
