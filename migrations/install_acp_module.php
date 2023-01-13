@@ -25,15 +25,15 @@ class install_acp_module extends \phpbb\db\migration\migration
     public function update_data()
     {
         global $request;
-        $currentIP = $request->server('REMOTE_ADDR','');
+        $currentIP = $request->server('REMOTE_ADDR', '');
 
-        $currentHost = $request->server('HTTP_HOST','');
+        $currentHost = $request->server('HTTP_HOST', '');
 
         return array(
             array('config.add', array('cypherbits_onionbb_installed', 1)),
 
             array('config.add', array('cypherbits_onionbb_checkIP', 1)),
-            array('config.add', array('cypherbits_onionbb_checkIP_list', '127.0.0.1,'.$currentIP)),
+            array('config.add', array('cypherbits_onionbb_checkIP_list', '127.0.0.1,' . $currentIP)),
 
             array('config.add', array('cypherbits_onionbb_blockTor2Web', 1)),
             array('config.add', array('cypherbits_onionbb_blockTor2Web_DNT', 0)),
@@ -58,14 +58,15 @@ class install_acp_module extends \phpbb\db\migration\migration
                 'acp',
                 'ACP_ONIONBB_TITLE',
                 array(
-                    'module_basename'	=> '\cypherbits\onionbb\acp\main_module',
-                    'modes'				=> array('settings', 'checks'),
+                    'module_basename' => '\cypherbits\onionbb\acp\main_module',
+                    'modes' => array('settings', 'checks'),
                 ),
             )),
         );
     }
 
-    public function revert_data(){
+    public function revert_data()
+    {
         return array(
             array('config.remove', array('cypherbits_onionbb_installed')),
 

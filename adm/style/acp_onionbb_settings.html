@@ -15,40 +15,64 @@
 		<legend>{{ lang('SETTINGS') }}</legend>
 		<dl>
 			<dt><label>Only allow request from this IPs (recommended)</label></dt>
-			<dd><label><input type="checkbox" name="cypherbits_onionbb_checkIP" value="1" {% if CYPHERBITS_ONIONBB_CHECKIP %} checked {% endif %}> Enable. Separated with commas (,)</label>INFO: current IP is {{ CURRENT_IP }}<br>
+			<dd><label><input type="checkbox" name="cypherbits_onionbb_checkIP" value="1" {% if
+							  CYPHERBITS_ONIONBB_CHECKIP %} checked {% endif %}> Enable. Separated with commas
+				(,)</label>INFO: current IP is {{ CURRENT_IP }}<br>
 				<textarea name="cypherbits_onionbb_checkIP_list">{{ CYPHERBITS_ONIONBB_CHECKIP_LIST }}</textarea></dd>
 		</dl>
 		<dl>
 			<dt><label>Block Tor2Web (recommended)</label></dt>
-			<dd><label><input type="checkbox" name="cypherbits_onionbb_blockTor2Web" value="1" {% if CYPHERBITS_ONIONBB_BLOCKTOR2WEB %} checked {% endif %}> Yes, block it.</label><br>
-				<label><input type="checkbox" name="cypherbits_onionbb_blockTor2Web_DNT" value="1" {% if CYPHERBITS_ONIONBB_BLOCKTOR2WEB_DNT %} checked {% endif %}> Block DNT header too. (Improves Tor2Web detection)</label>
+			<dd><label><input type="checkbox" name="cypherbits_onionbb_blockTor2Web" value="1" {% if
+							  CYPHERBITS_ONIONBB_BLOCKTOR2WEB %} checked {% endif %}> Yes, block it.</label><br>
+				<label><input type="checkbox" name="cypherbits_onionbb_blockTor2Web_DNT" value="1" {% if
+							  CYPHERBITS_ONIONBB_BLOCKTOR2WEB_DNT %} checked {% endif %}> Block DNT header too.
+					(Improves Tor2Web detection)</label>
 			</dd>
 		</dl>
 		<dl>
 			<dt><label>Only allow request with this Host header (recommended)</label></dt>
-			<dd><label><input type="checkbox" name="cypherbits_onionbb_host" value="1" {% if CYPHERBITS_ONIONBB_HOST %} checked {% endif %}> Enable. Separated with commas (,)</label>INFO: current Host header is {{ CURRENT_HOST }}<br>
+			<dd><label><input type="checkbox" name="cypherbits_onionbb_host" value="1" {% if CYPHERBITS_ONIONBB_HOST %}
+							  checked {% endif %}> Enable. Separated with commas (,)</label>INFO: current Host header is
+				{{ CURRENT_HOST }}<br>
 				<textarea name="cypherbits_onionbb_host_list">{{ CYPHERBITS_ONIONBB_HOST_LIST }}</textarea></dd>
 		</dl>
 		<dl>
 			<dt><label>Block non-standard User-Agents (recommended)</label></dt>
-			<dd><label><input type="checkbox" name="cypherbits_onionbb_userAgents" value="1" {% if CYPHERBITS_ONIONBB_USERAGENTS %} checked {% endif %}> Yes, block it.</label>INFO: current User-Agent is {{ HTTP_USER_AGENT }}<br>
-				<label><input type="checkbox" name="cypherbits_onionbb_userAgentsTB8" value="1" {% if CYPHERBITS_ONIONBB_USERAGENTSTB8 %} checked {% endif %}> Only allow the latest Tor Browser 8.x Windows, Linux and Android.</label>
+			<dd><label><input type="checkbox" name="cypherbits_onionbb_userAgents" value="1" {% if
+							  CYPHERBITS_ONIONBB_USERAGENTS %} checked {% endif %}> Yes, block it.</label>INFO: current
+				User-Agent is {{ HTTP_USER_AGENT }}<br>
+				<label><input type="checkbox" name="cypherbits_onionbb_userAgentsTB8" value="1" {% if
+							  CYPHERBITS_ONIONBB_USERAGENTSTB8 %} checked {% endif %}> Only allow the latest Tor Browser
+					8.x Windows, Linux and Android.</label>
 			</dd>
 		</dl>
 		<dl>
 			<dt><label>HTTP response headers security</label></dt>
 			<dd>
 
-				<label><input type="checkbox" name="cypherbits_onionbb_headers_referrer" value="1" {% if CYPHERBITS_ONIONBB_HEADERS_REFERRER %} checked {% endif %}> Set Referrer-Policy to 'same-origin' (recommended).</label><a href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers/Referrer-Policy">More info</a><br>
-				<label><input type="checkbox" name="cypherbits_onionbb_headers_contentType" value="1" {% if CYPHERBITS_ONIONBB_HEADERS_CONTENTTYPE %} checked {% endif %}> Set X-Content-Type-Options to 'nosniff' (recommended).</label><a href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers/X-Content-Type-Options">More info</a><br>
-				<label><input type="checkbox" name="cypherbits_onionbb_headers_frame" value="1" {% if CYPHERBITS_ONIONBB_HEADERS_FRAME %} checked {% endif %}> Set X-Frame-Options to 'DENY' (recommended).</label><a href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers/X-Frame-Options">More info</a><br>
-				<label><input type="checkbox" name="cypherbits_onionbb_headers_content" value="1" {% if CYPHERBITS_ONIONBB_HEADERS_CONTENT %} checked {% endif %}> Set Content-Security-Policy to disable Javascript execution.</label><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">More info</a><br>
+				<label><input type="checkbox" name="cypherbits_onionbb_headers_referrer" value="1" {% if
+							  CYPHERBITS_ONIONBB_HEADERS_REFERRER %} checked {% endif %}> Set Referrer-Policy to
+					'same-origin' (recommended).</label><a
+					href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers/Referrer-Policy">More info</a><br>
+				<label><input type="checkbox" name="cypherbits_onionbb_headers_contentType" value="1" {% if
+							  CYPHERBITS_ONIONBB_HEADERS_CONTENTTYPE %} checked {% endif %}> Set X-Content-Type-Options
+					to 'nosniff' (recommended).</label><a
+					href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers/X-Content-Type-Options">More
+				info</a><br>
+				<label><input type="checkbox" name="cypherbits_onionbb_headers_frame" value="1" {% if
+							  CYPHERBITS_ONIONBB_HEADERS_FRAME %} checked {% endif %}> Set X-Frame-Options to 'DENY'
+					(recommended).</label><a
+					href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers/X-Frame-Options">More info</a><br>
+				<label><input type="checkbox" name="cypherbits_onionbb_headers_content" value="1" {% if
+							  CYPHERBITS_ONIONBB_HEADERS_CONTENT %} checked {% endif %}> Set Content-Security-Policy to
+					disable Javascript execution.</label><a
+					href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">More info</a><br>
 			</dd>
 		</dl>
 	</fieldset>
 
 	<fieldset class="submit-buttons">
-		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />
+		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}"/>
 		<!--<input class="button2" type="submit" id="preview" name="preview" value="{{ lang('PREVIEW') }}" />-->
 		{{ S_FORM_TOKEN }}
 	</fieldset>
